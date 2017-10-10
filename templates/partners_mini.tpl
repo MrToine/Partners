@@ -13,7 +13,7 @@
 				# END partner #
 			</ul>
 			# START partner_news #
-				<p>{partner_news.TITLE}</p>
+				<p><a href="{NEWS_LINK}{partner_news.ID}">{partner_news.TITLE}</a></p>
 			# END partner_news #
 			<br />
 			<p><a href="{ADD_LINK}" class="basic-button">{ADD_LINK_MESSAGE}</a></p>

@@ -90,6 +90,11 @@ class PartnersUrlBuilder
 		return DispatchManager::get_url(self::$dispatcher, '/out/');
 	}
 
+	public static function news()
+	{
+		return DispatchManager::get_url(self::$dispatcher, '/news/');
+	}
+
 	public static function link_my_banner()
 	{
 		return DispatchManager::get_url(self::$dispatcher, '/banner.png');

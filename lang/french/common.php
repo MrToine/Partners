@@ -143,6 +143,9 @@ $lang = array(
 	'manager.content_form_news' => 'Contenu de la niouz',
 	'manager.news_publied' => 'La news à été créer avec succès. Elle est désormais publier sur le site.',
 
+	// News
+	'news.link' => PartnersUrlBuilder::news()->absolute(),
+
 	// Erreurs
 	'partner_not_exists' => '<div class="error">Le partenaire n\'existe pas !<br/>Vous aller être rediriger vers l\'accueil du site...</div>',
 

@@ -63,7 +63,8 @@ class PartnersRankModuleMiniMenu extends ModuleMiniMenu {
 	    	'LINK_LIST_PARTNERS' => $lang['link_list_partners'],
             'UPDATE_ACTIVE' => $update_active,
             'UPDATE_LINK_MESSAGE' => $lang['update_link_message'],
-            'UPDATE_LINK' => $lang['update_link']
+            'UPDATE_LINK' => $lang['update_link'],
+            'NEWS_LINK' => $lang['news.link']
 	    ));
 
         $result = PersistenceContext::get_querier()->select_rows(

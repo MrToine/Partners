@@ -40,6 +40,7 @@ $url_controller_mappers = array(
 	new UrlControllerMapper('PartnersAddController', '`^/add`'),
 	new UrlControllerMapper('PartnersManagerController', '`^/manager(?:/([a-z]+))?/?$`', array('action')),
 	new UrlControllerMapper('PartnersCreateNewsController', '`^/manager/news/create`'),
+	new UrlControllerMapper('PartnersNewsController', '`/news(?:/([0-9]+))?/?$`', array('news_id')),
 	new UrlControllerMapper('PartnersEntryController', '`/entry(?:/([0-9]+))?/?$`', array('partner_id')),
 	new UrlControllerMapper('PartnersOutController', '`/out(?:/([0-9]+))?/?$`', array('partner_id')),
 	new UrlControllerMapper('PartnersController', '`^.*$`'),
