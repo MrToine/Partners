@@ -30,6 +30,7 @@ class PartnersSetup extends DefaultModuleSetup
 
 	public static $partners_table;
 	public static $partners_config_table;
+	public static $partners_news_table;
 
 	private $partner;
 
