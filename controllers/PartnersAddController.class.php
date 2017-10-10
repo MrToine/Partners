@@ -57,6 +57,7 @@ class PartnersAddController extends ModuleController {
 						'user_id' => $user_id,
 						'name' => $form->get_value('name'), 
 						'mail' => $form->get_value('email'),
+						'password' => "null",
 						'link' => $form->get_value('link'), 
 						'link_banner' => $form->get_value('link_banner'), 
 						'description' => $form->get_value('description'),

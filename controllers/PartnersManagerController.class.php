@@ -46,21 +46,27 @@ class PartnersManagerController extends ModuleController {
 			$this->view->put('USER_CONNECTED', False);
 		}
 
-		$this->config = PartnersService::get_config();
+		if(PartnersService::partner_exist('user_id', $this->user->get_id())){
+			$this->config = PartnersService::get_config();
 
-		if($this->config->get_partner_manager() == "Oui"){
-			if($this->action == "home"){	
-				$this->get_home();
-			}elseif($this->action == "edit"){
-				$this->get_edit();
-			}elseif($this->action == "news"){
-				$this->get_news();
+			if($this->config->get_partner_manager() == "Oui"){
+				if($this->action == "home"){	
+					$this->get_home();
+				}elseif($this->action == "edit"){
+					$this->get_edit();
+				}elseif($this->action == "news"){
+					$this->get_news();
+				}else{
+					$this->get_home();
+				}
 			}else{
-				$this->get_home();
+				AppContext::get_response()->redirect(PartnersUrlBuilder::home());
 			}
 		}else{
 			AppContext::get_response()->redirect(PartnersUrlBuilder::home());
 		}
+
+			
 		return $this->generate_response();
 	}
 	

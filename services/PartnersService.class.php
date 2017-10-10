@@ -121,9 +121,17 @@ class PartnersService
 	}
 
 	public static function partner_exist($arg){
-		try {
-			$find = self::$db_querier->get_column_value(PartnersSetup::$partners_table, 'COUNT(*)', 'WHERE mail = :mail', array('mail' => $arg));
-		} catch (RowNotFoundException $e) {}
+		
+		if($type == "mail"){
+			try {
+				$find = self::$db_querier->get_column_value(PartnersSetup::$partners_table, 'COUNT(*)', 'WHERE mail = :mail', array('mail' => $arg));
+			} catch (RowNotFoundException $e) {}
+		}elseif($type == "user_id"){
+			try {
+				$find = self::$db_querier->get_column_value(PartnersSetup::$partners_table, 'COUNT(*)', 'WHERE user_id = :user_id', array('user_id' => $arg));
+			} catch (RowNotFoundException $e) {}
+		}
+			
 			
 		return $find;
 	}
