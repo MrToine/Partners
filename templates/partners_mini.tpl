@@ -12,7 +12,9 @@
 					<li style="margin:5px;text-align:center;"><a href="{LINK_OUT}{partner.ID}"><img src="{partner.LINK_BANNER}" alt="{partner.NAME}" style="max-width:100px;" /></a></li>
 				# END partner #
 			</ul>
-				
+			# START partner_news #
+				<p>{partner_news.TITLE}</p>
+			# END partner_news #
 			<br />
 			<p><a href="{ADD_LINK}" class="basic-button">{ADD_LINK_MESSAGE}</a></p>
 			# IF UPDATE_ACTIVE #
