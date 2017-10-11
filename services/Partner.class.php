@@ -31,7 +31,6 @@ class Partner {
 			$_user_id,
 			$_name,
 			$_mail,
-			$_password,
 			$_description,
 			$_link,
 			$_link_banner,
@@ -59,12 +58,6 @@ class Partner {
 	public function get_mail(){
 
 		return $this->_mail;
-
-	}
-
-	public function get_password(){
-
-		return $this->_password;
 
 	}
 
@@ -140,15 +133,6 @@ class Partner {
 
 	}
 
-	public function set_password($password) {
-
-		if(is_string($password)){
-
-			$this->_password = htmlspecialchars($password);
-
-		}
-
-	}
 
 	public function set_description($description){
 
@@ -199,7 +183,6 @@ class Partner {
 			'user_id' => $this->get_user_id(),
 			'name' => TextHelper::htmlspecialchars($this->get_name()),
 			'mail' => TextHelper::htmlspecialchars($this->get_mail()),
-			'password' => TextHelper::htmlspecialchars($this->get_password()),
 			'description' => TextHelper::htmlspecialchars($this->get_description()),
 			'link' => TextHelper::htmlspecialchars($this->get_link()),
 			'link_banner' => TextHelper::htmlspecialchars($this->get_link_banner()),
@@ -214,7 +197,6 @@ class Partner {
 		$this->_user_id = $properties['user_id'];
 		$this->_name = $properties['name'];
 		$this->_mail = $properties['mail'];
-		$this->_password = $properties['password'];
 		$this->_description = $properties['description'];
 		$this->_link = $properties['link'];
 		$this->_link_banner = $properties['link_banner'];
@@ -230,7 +212,6 @@ class Partner {
 			'PARTNER_USER_ID' => $this->_user_id,
 			'NAME' => $this->_name,
 			'MAIL' => $this->_mail,
-			'PASSWORD' => $this->_password,
 			'DESCRIPTION' => $this->_description,
 			'LINK' => $this->_link,
 			'LINK_BANNER' => $this->_link_banner,

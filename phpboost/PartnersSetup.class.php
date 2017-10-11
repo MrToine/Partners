@@ -76,7 +76,7 @@ class PartnersSetup extends DefaultModuleSetup
 		);
 		$news_fields = array(
 			'id' => array('type' => 'integer', 'lenght' => 11, 'autoincrement' => true, 'notnull' => 1),
-			'user_id' => array('type' => 'integer', 'lenght' => 11, 'notnull' => 1, 'default' => "'0'"),
+			'partner_id' => array('type' => 'integer', 'lenght' => 11, 'notnull' => 1, 'default' => "'0'"),
 			'title' => array('type' => 'string', 'lenght' => 255, 'notnull' => 1),
 			'content' => array('type' => 'string', 'lenght' => 65000),
 			'created' => array('type' => 'integer', 'lenght' => 11, 'notnull' => 1),
