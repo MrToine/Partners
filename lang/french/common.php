@@ -35,6 +35,8 @@ $lang = array(
 	'module_title' => 'Partenaires',
 	'add_page' => 'Ajouter',
 	'manager_page' => 'Mon espace partenaire',
+	'news_page' => 'Actus',
+	'add_news_page' => 'Ajouter une news',
 
 	// Gestion
 	'partners_configuration' => 'Configuration du module',

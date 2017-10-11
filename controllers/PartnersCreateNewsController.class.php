@@ -105,7 +105,8 @@ class PartnersCreateNewsController extends ModuleController {
 		
 		$breadcrumb = $graphical_environment->get_breadcrumb();
 		$breadcrumb->add($this->lang['module_title'], PartnersUrlBuilder::home()->rel());
-		$breadcrumb->add($this->lang['add_page'], PartnersUrlBuilder::add()->rel());
+		$breadcrumb->add($this->lang['manager_page'], PartnersUrlBuilder::partner_manager('home')->rel());
+		$breadcrumb->add($this->lang['add_news_page'], PartnersUrlBuilder::create_news()->rel());
 
 		return $response;
 	}

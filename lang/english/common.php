@@ -2,7 +2,7 @@
 /*##################################################
  *                            common.php
  *                            -------------------
- *   begin                : November 02, 2014
+ *   begin                : October 24, 2014
  *   copyright            : (C) 2014 Anthony VIOLET
  *   email                : anthony.violet@outlook.fr
  *
@@ -27,70 +27,136 @@
 
 
  ####################################################
- #						English						#
+ #						French						#
  ####################################################
 
 $lang = array(
-	// Pages title
+	// Titre de pages
 	'module_title' => 'Partners',
 	'add_page' => 'Add',
+	'manager_page' => 'My partner space',
+	'news_page' => 'News Partner',
+	'add_news_page' => 'Add a news',
 
-	// Manage
-	'partners_management' => 'Managing partners',
-	'partners_update_banner' => 'Update my banner',
+	// Gestion
+	'partners_configuration' => 'Module Config',
+	'partners_management' => 'Partner manager',
+	'partners_update_banner' => 'Update my logo',
 	'partners_add' => 'Add a partner',
 	'partner_head_manage' => 'Actions',
 	'partner_edit' => PartnersUrlBuilder::edit()->absolute(),
-	'partner_manage' => PartnersUrlBuilder::delete()->absolute(),
-	'update_banner_success' => 'Your banner has been update.',
-	'update_banner_error' => 'An error occured, your banner has not been saved.',
-	'my_banner' => '<div class="notice">If you encouter any problems to upload for your banner, you can change it manually by overwriting the banner.png file in folder <strong>partners</strong>. <span style="color:red">Warning !</span> do note change the name of banner.</div>My current banner :',
+	'partner_delete' => PartnersUrlBuilder::delete()->absolute(),
+	'update_banner_success' => 'Your logo has been updated. If the image is not updated, wait a while.',
+	'update_banner_error' => 'An error as occured. Your logo as not updated.',
+	'my_banner' => '<div class="notice">If you have a problems for uploading your logo, you can modify it by hand by overwriting the file banner.png in the folder <strong>partners</strong>. <span style="color:red">Attention ! </span> Do not modify the logo\'s name</div>My logo :',
 	'update_message' => '',
-	'partner_update_message' => 'The partner has been update !',
+	'partner_update_message' => 'The partner as been modified.',
 
-	// entry/output links
+	// Liens entrées/sorties
 	'link_entry' => PartnersUrlBuilder::link_entry()->absolute(),
 	'link_out' => PartnersUrlBuilder::link_out()->absolute(),
 
-	// Informations on my banner
-	'link_my_banner' => PartnersUrlBuilder::link_my_banner()->absolute(),
+	// Informations sur ma bannière
+	'link_my_banner' => HOST.'/partners/banner.png',
 	
-	// messages & link
-	'home_message' => 'Here are the differents partners of website. If you want to become partner, click on "Become a Partner". Partners are classified by entries decreasing. The first 5 are displayed on menu',
+	//messages et liens
+	'home_message' => 'Here are the different partners of the site. If you wish to become a partner, click on "Become a Partner". Partners are ranked by decreasing entries. The first 5 are displayed on the site menu.',
 	'add_link' => PartnersUrlBuilder::add()->absolute(),
-	'add_link_message' => 'Become a partner',
+	'add_link_message' => 'Become partner',
+	'update_link' => PartnersUrlBuilder::partner_manager('home')->absolute(),
+	'update_link_message' => 'My Partner space',
 
-	// table
-	'partner_head_logo' => 'Banner',
+	//tableau
+	'partner_head_logo' => 'Logo',
 	'partner_head_name' => 'Partner',
 	'partner_head_entry' => 'Entries',
 	'partner_head_out' => 'Outputs',
 
 	//Module mini
 	'url_list_partners' => PartnersUrlBuilder::home()->absolute(),
-	'link_list_partners' => 'See all partners',
+	'link_list_partners' => 'View all partners',
 
-	// Add partenaire
-	'add_message' => 'You will apply for partnership with <a href="'.HOST.'">'.HOST.'</a> To complete the request, thank to fill in the form bellow',
-	'add_success' => 'You have been added to list of our partners.',
-	'add_notice' => 'To have your site in ranking, you need to add this code on your website. It allows the classification of carefully your website. <span style="color:red">Warning : </span>. If you change this code or you do not use, our script will not take into account the number of visitors you sent him',
+	// Ajout de partenaire
+	'add_message' => 'You will apply for a partnership with our website. To finish, please complet form :',
+	'add_success' => 'You have been added to list of partners.',
+	'add_notice' => 'For your site to be referenced in the ranking, you must add this code to your site. It allows the ranking to properly take into account your site.
 
-	// Form
-	'form_name' => 'Name of your website',
-	'form_name_desc' => 'Enter name of your website',
+Warning: If you modify this code or do not use it, the site will not be able to take into account the number of visitors sent to you.',
 
-	'form_mail' => 'Your mail',
-	'form_mail_desc' => 'Enter your mail',
+	// Formulaire
+	'form_name' => 'Nom de votre site',
+	'form_name_desc' => 'Indiquez le nom de votre site web',
 
-	'form_link' =>'Link of your website' ,
-	'form_link_desc' => 'Enter link of your website',
+	'form_mail' => 'Votre email',
+	'form_mail_desc' => 'Indiquez votre email de contact',
 
-	'form_link_banner' => 'Link of your banner',
-	'form_link_banner_desc' => 'Enter link of your banner',
+	'form_link' =>'Url de votre site' ,
+	'form_link_desc' => 'Indiquez l\'url de votre site web',
 
-	'form_description' => 'Make a description on your website',
+	'form_link_banner' => 'Url de votre logo',
+	'form_link_banner_desc' => 'Indiquez l\'url de votre logo',
 
-	// Errors
-	'partner_not_exists' => '<div class="error">This partner does not exist</div>',
+	'form_description' => 'Faites une petite description de votre site',
+	'partner_exist' => 'Un partenaire existe déjà avec cette adresse email.',
+	'user_is_partner' => 'Vous avez déjà souscris un partenariat avec le site.',
+
+	##admin form
+	'config.nb_partners_mini_module' => 'Nombre de partenaires à afficher dans le mini module',
+	'config.select_nb_partners_mini_module' => array(
+		'1' => '1',
+		'2' => '2',
+		'3' => '3',
+		'4' => '4',
+		'5' => '5',
+		'6' => '6',
+		'7' => '7',
+		'8' => '8',
+		'9' => '9',
+		'10' => '10'
+	),
+	'config.display_rank' => 'Générer un classement de partenaires ?',
+	'config.display_rank.yes' => 'Oui',
+	'config.display_rank.no' => 'Non',
+	'config.partner_manager' => 'Les partenaires peuvent-ils gérer leurs liens ?',
+	'config.partner_manager.yes' => 'Oui',
+	'config.partner_manager.no' => 'Non',
+	'config.news_manager' => 'Les partenaires peuvent-ils créer des actus sur votre site ?',
+	'config.news_manager.yes' => 'Oui',
+	'config.news_manager.no' => 'Non',
+	'config.success' => 'Les modifications du module ont bien été enregistrés.',
+
+	//Manager partner
+	'manager.form_mail' => 'Email',
+	'manager.form_mail_desc' => 'Indiquez votre email utiliser lors de la demande de partenariat',
+	'manager.form_password' => 'Mot de passe',
+	'manager.form_password_desc' => 'Indiquez le mot de passe qui vous à été transmis lors de votre inscription',
+	'manager.connected_success' => 'Connecté avec succès !',
+	'manager.edit' => 'Editer mes informations',
+	'manager.edit_link' => PartnersUrlBuilder::partner_manager('edit')->absolute(),
+	'manager.create_news' => 'Créer une niouze',
+	'manager.news_link' => PartnersUrlBuilder::partner_manager('news')->absolute(),
+	'manager.connection_required' => 'Pour pouvoir gérer votre espace partenaire vous devez être inscrit au site.',
+	'manager.user_not_partner' => 'Attention ! Vous devez être partenaire pour accèder à cette page. Vous pouvez bien entendu, faire la demande sur',
+	'manager.create_news_btn' => 'Créer une news partenaire',
+	'manager.creat_news_link' => PartnersUrlBuilder::create_news()->absolute(),
+	// FORM NEWS PARTNER
+	'manager.title_form_news' => 'Titre',
+	'manager.title_form_news_desc' => 'Indiquez le titre de votre news',
+	'manager.content_form_news' => 'Contenu de la niouz',
+	'manager.news_publied' => 'La news à été créer avec succès. Elle est désormais publier sur le site.',
+
+	// News
+	'news.link' => PartnersUrlBuilder::news()->absolute(),
+	'news.partner_info' => 'Informations sur le Partenaire',
+	'news.visitors_entry' => 'Visiteurs reçu par le partenaire: ',
+	'news.visitors_out' => 'Visiteurs envoyés au partenaire: ',
+	'news.visit_button' => 'Visiter ce partenaire',
+
+	// Erreurs
+	'partner_not_exists' => '<div class="error">Le partenaire n\'existe pas !<br/>Vous aller être rediriger vers l\'accueil du site...</div>',
+
+	//Divers
+	'donation' => 'Si le module vous plait, vous pouvez me soutenir en faisant un petit dons via PayPal.',
+	'VERSION' => '',
 
 );
