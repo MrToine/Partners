@@ -100,4 +100,3 @@ class PartnersUrlBuilder
 		return DispatchManager::get_url(self::$dispatcher, '/banner.png');
 	}
 }
-?>

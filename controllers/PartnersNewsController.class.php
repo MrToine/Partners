@@ -39,12 +39,10 @@ class PartnersNewsController extends ModuleController {
 
 	private function init(){
 		$this->lang = LangLoader::get('common', 'partners');
-		$this->view = New FileTemplate('partners/')
+		$this->view = New FileTemplate('partners/');
 	}
 
 	private function generate_response(){
 
 	}
 }
-
-	
