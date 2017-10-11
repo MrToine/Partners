@@ -156,7 +156,8 @@ $lang = array(
 	'partner_not_exists' => '<div class="error">Le partenaire n\'existe pas !<br/>Vous aller être rediriger vers l\'accueil du site...</div>',
 
 	//Divers
-	'donation' => 'Si le module vous plait, vous pouvez me soutenir en faisant un petit dons via PayPal.',
+	'donation' => 'Si le module vous plait, vous pouvez me soutenir en faisant un petit don via PayPal.',
+	'paypal' => '',
 	'VERSION' => '',
 
 );

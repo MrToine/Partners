@@ -157,6 +157,25 @@ Warning: If you modify this code or do not use it, the site will not be able to 
 
 	//Divers
 	'donation' => 'Si le module vous plait, vous pouvez me soutenir en faisant un petit dons via PayPal.',
+	'paypal' => "<div id="paypal-button"></div>
+
+    <script>
+        paypal.Button.render({
+
+            env: 'production', // Or 'sandbox',
+
+            commit: true, // Show a 'Pay Now' button
+
+            payment: function() {
+                // Set up the payment here
+            },
+
+            onAuthorize: function(data, actions) {
+                // Execute the payment here
+           }
+
+        }, '#paypal-button');
+    </script>"
 	'VERSION' => '',
 
 );
