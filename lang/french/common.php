@@ -145,6 +145,10 @@ $lang = array(
 
 	// News
 	'news.link' => PartnersUrlBuilder::news()->absolute(),
+	'news.partner_info' => 'Informations sur le Partenaire',
+	'news.visitors_entry' => 'Visiteurs reçu par le partenaire: ',
+	'news.visitors_out' => 'Visiteurs envoyés au partenaire: ',
+	'news.visit_button' => 'Visiter ce partenaire',
 
 	// Erreurs
 	'partner_not_exists' => '<div class="error">Le partenaire n\'existe pas !<br/>Vous aller être rediriger vers l\'accueil du site...</div>',

@@ -45,7 +45,7 @@ class PartnersCreateNewsController extends ModuleController {
 		
 		if ($this->submit_button->has_been_submited()){
 			if ($form->validate()){
-				if(PartnersService::partner_exist($form->get_value('email'))){
+				if(PartnersService::partner_exist('mail', $form->get_value('email'))){
 					$this->view->put('PARTNER_EXIST', True);
 				}else{
 					$result = PersistenceContext::get_querier()->insert(PREFIX.'partners_news', array(

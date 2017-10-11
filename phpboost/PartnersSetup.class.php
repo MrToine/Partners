@@ -91,9 +91,9 @@ class PartnersSetup extends DefaultModuleSetup
 		);
 		$config_fields = array(
 			'nb_partners_mini_module' => array('type' => 'integer', 'length' => 11, 'notnull' => 1, 'default' => 5),
-			'display_rank' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => 'Oui'),
-			'partner_manager' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => 'Oui'),
-			'news_manager' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => 'Oui'),
+			'display_rank' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => "'Oui'"),
+			'partner_manager' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => "'Oui'"),
+			'news_manager' => array('type' => 'string', 'length' => 3, 'notnull' => 1, 'default' => "'Oui'"),
 		);
 		$config_options = array(
 			'indexes' => array(
@@ -113,6 +113,7 @@ class PartnersSetup extends DefaultModuleSetup
 	public function insert_partners_data(){
 		PersistenceContext::get_querier()->insert(self::$partners_table, array(
 			'id' => 1,
+			'user_id' => 1,
 			'mail' => $this->partner['partner.mail'],
 			'name' => $this->partner['partner.name'],
 			'description' => $this->partner['partner.description'],

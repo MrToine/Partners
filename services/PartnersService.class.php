@@ -80,6 +80,12 @@ class PartnersService
 		return $result;
 	}
 
+	public static function get_news_id($id){
+		$result = self::$db_querier->select_single_row_query('SELECT * FROM '.PREFIX.'partners_news JOIN '.PREFIX.'partners ON '.PREFIX.'partners.id = '.PREFIX.'partners_news.partner_id WHERE '.PREFIX.'partners_news.id=:id', array('id' => $id));
+
+		return $result;
+	}
+
 	public static function get_partner($condition = "", $arg = "")
 	{
 		if($condition){
@@ -120,8 +126,8 @@ class PartnersService
 		return $find;
 	}
 
-	public static function partner_exist($arg){
-		
+	public static function partner_exist($type, $arg){
+
 		if($type == "mail"){
 			try {
 				$find = self::$db_querier->get_column_value(PartnersSetup::$partners_table, 'COUNT(*)', 'WHERE mail = :mail', array('mail' => $arg));
@@ -131,8 +137,6 @@ class PartnersService
 				$find = self::$db_querier->get_column_value(PartnersSetup::$partners_table, 'COUNT(*)', 'WHERE user_id = :user_id', array('user_id' => $arg));
 			} catch (RowNotFoundException $e) {}
 		}
-			
-			
 		return $find;
 	}
 
