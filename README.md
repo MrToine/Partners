@@ -10,3 +10,16 @@ Procédure d'installation:
 </ul>
 
 Le module est en phase de bêta-test il est fortement déconseiller de l'utiliser sur un site en production.
+
+Add-on for PHPBoost CMS.
+Restriction : own the <a href="http://www.phpboost.com" target="_blank">phpboost</a> CMS
+
+Install process :
+<ul>
+  <li>Unzip archive content at root of your website</li>
+  <li>Rename directory Partners-beta in partners</li>
+  <li>install this add-on in your admin panel</li>
+  <li>Enjoy :)</li>
+</ul>
+
+This module is in beta phase. Do not install it on your website in production
