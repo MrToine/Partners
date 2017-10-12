@@ -33,7 +33,7 @@
 			<a href="{@manager.creat_news_link}" class="basic-button">{@manager.create_news_btn}</a>
 			<ul>
 				# START news #
-					<li>{news.TITLE}</li>
+					<li><a href="{@news.link}{news.ID}">{news.TITLE}</a></li>
 				# END news #
 			</ul>
 		# ELSE #
