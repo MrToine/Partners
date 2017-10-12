@@ -1,10 +1,12 @@
 Add-on pour le CMS phpboost. 
-RESTRICTION: Posséder le CMS phpboost.
+RESTRICTION: Posséder le <a href="phpboost.com">CMS phpboost</a>.
 
 Procédure d'installation: 
--Dézipper le contenu de l'archive à la racine du site.
--Renommer le dossier Partners-beta en partners (très important)
--Procédé à l'install dans votre panneau admin.
--Enjoy :)
+<ul>
+<li>Dézipper le contenu de l'archive à la racine du site.</li>
+<li>Renommer le dossier Partners-beta en partners (très important)
+<li>Procédé à l'install dans votre panneau admin.</li>
+<li>Enjoy :)</li>
+</ul>
 
 Le module est en phase de bêta-test il est fortement déconseiller de l'utiliser sur un site en production.
