@@ -1,5 +1,5 @@
 Add-on pour le CMS phpboost. 
-RESTRICTION: Posséder le <a href="http://www.phpboost.com" target="_blank>CMS phpboost</a>.
+RESTRICTION: Posséder le <a href="http://www.phpboost.com" target="_blank">CMS phpboost</a>.
 
 Procédure d'installation: 
 <ul>
