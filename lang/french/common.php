@@ -156,8 +156,7 @@ $lang = array(
 	'partner_not_exists' => '<div class="error">Le partenaire n\'existe pas !<br/>Vous aller être rediriger vers l\'accueil du site...</div>',
 
 	//Divers
-	'donation' => 'Si le module vous plait, vous pouvez me soutenir en faisant un petit don via PayPal.',
-	'paypal' => '',
-	'VERSION' => '',
+	'donation' => 'Plus de 8 heures de développement ont été nécessaire pour le développement de ce module. Si vous voulez soutenir le projet, et soutenir son créateur vous pouvez faire un don paypal via le bouton ci-dessous. Ce n\'est bien sûre pas obligatoire et même sans ce petit geste, je garanti des modules de qualité et un suivis personnel pour chaque utilisateurs du module. Mais un simple don permet d\'encourager et de remercier un créateur pour son travail. Anthony VIOLET',
+	'mail.creator.module' => 'anthony.violet@outlook.be',
 
 );
