@@ -84,21 +84,24 @@ class PartnersRankModuleMiniMenu extends ModuleMiniMenu {
 
         $result->dispose();
 
-        $result_news = PersistenceContext::get_querier()->select_rows(
-            PREFIX.'partners_news', array(
-                '*'
-            ), 
-            'ORDER BY id DESC LIMIT 0, 20'
-        );
+        if($config->get_news_manager() == "Oui"){
+            $result_news = PersistenceContext::get_querier()->select_rows(
+                PREFIX.'partners_news', array(
+                    '*'
+                ), 
+                'ORDER BY id DESC LIMIT 0, 20'
+            );
 
-        while ($row_news = $result_news->fetch())
-        {
-            $partner_news = new PartnerNews();
-            $partner_news->set_properties($row_news);
-            $tpl->assign_block_vars('partner_news', $partner_news->get_array_tpl_vars());
+            while ($row_news = $result_news->fetch())
+            {
+                $partner_news = new PartnerNews();
+                $partner_news->set_properties($row_news);
+                $tpl->assign_block_vars('partner_news', $partner_news->get_array_tpl_vars());
+            }
+
+            $result_news->dispose();
         }
-
-        $result_news->dispose();
+            
  
 	    // Retourne l'affichage du menu
 	    return $tpl->render();
