@@ -1,15 +1,13 @@
-<section>
-	<div class="module-mini-container">
+<div class="module-mini-container">
 	<head>
 		<div class="module-mini-top">
 			<h5 class="sub-title">{MODULE_MENU_TITLE}</h5>
 		</div>
 	</head>
-	<article>
 		<div class="module-mini-contents">
-			<ul class="menu-vertical-0 menu-vertical">
+			<ul class="menu-vertical-0">
 				# START partner #
-					<li style="margin:5px;text-align:center;"><a href="{LINK_OUT}{partner.ID}"><img src="{partner.LINK_BANNER}" alt="{partner.NAME}" style="max-width:100px;" /></a></li>
+					<li style="text-align:center;list-style:none;"><a href="{LINK_OUT}{partner.ID}"><img src="{partner.LINK_BANNER}" alt="{partner.NAME}" style="max-width:150px;" /></a></li>
 				# END partner #
 			</ul>
 			# START partner_news #
@@ -23,10 +21,5 @@
 			
 			<a href="{URL_LIST_PARTNERS}">{LINK_LIST_PARTNERS}</a>
 		</div>
-	</article>
-	<footer>
-		<div class="module-mini-bottom">
-		</div>
-	</div>
-	</footer>
-</section>
+	<div class="module-mini-bottom"></div>
+</div>
