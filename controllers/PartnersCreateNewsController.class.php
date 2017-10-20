@@ -52,9 +52,10 @@ class PartnersCreateNewsController extends ModuleController {
 						'partner_id' => $this->user->get_id(),
 						'title' => $form->get_value('title'), 
 						'content' => $form->get_value('content'),
-						'created' => time()
+						'created' => time(),
+						'edited' => time()
 					));
-
+					PartnersService::test($form->get_value('content'));
 					$this->view->put('ADD_NEWS_OK', True);
 				}		
 			}
@@ -85,8 +86,8 @@ class PartnersCreateNewsController extends ModuleController {
 			'maxlength' => 25, 'description' => $this->lang['manager.title_form_news_desc'], 'required' => true)
 		));
 
-		// DESCRIPTION
-		$fieldset->add_field(new FormFieldRichTextEditor('description', $this->lang['manager.content_form_news'], '', array('required' => true)));
+		// CONTENT
+		$fieldset->add_field(new FormFieldRichTextEditor('content', $this->lang['manager.content_form_news'], '', array('required' => true)));
 
 		// BUTTONS
 		$buttons_fieldset = new FormFieldsetSubmit('buttons');

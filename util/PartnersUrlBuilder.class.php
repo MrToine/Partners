@@ -55,6 +55,11 @@ class PartnersUrlBuilder
 		return DispatchManager::get_url(self::$dispatcher, '/manager/'.$page);
 	}
 
+	public static function delete_news($partner_id, $news_id)
+	{
+		return DispatchManager::get_url(self::$dispatcher, '/manager/'.$partner_id.'/news/'.$news_id.'/delete');
+	}
+
 	public static function create_news()
 	{
 		return DispatchManager::get_url(self::$dispatcher, '/manager/news/create');

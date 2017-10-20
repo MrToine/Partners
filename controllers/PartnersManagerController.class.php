@@ -182,6 +182,10 @@ class PartnersManagerController extends ModuleController {
 						$news->set_properties($row);
 
 						$this->view->assign_block_vars('news', $news->get_array_tpl_vars());
+						$this->view->put_all(array(
+							'DELETE_LINK' => PartnersUrlBuilder::delete_news($this->user->get_id(), $news->get_id())->absolute(),
+							'EDIT_LINK' => "",
+						));
 
 					}
 
@@ -189,7 +193,7 @@ class PartnersManagerController extends ModuleController {
 				}
 
 				$this->view->put_all(array(
-							'NEWS' => True
+							'NEWS' => True,
 						));
 			}else{
 				$this->view->put('USER_IS_PARTNER', False);

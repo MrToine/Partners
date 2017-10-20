@@ -31,14 +31,31 @@
 	# IF NEWS #
 		# IF USER_IS_PARTNER #
 			<a href="{@manager.creat_news_link}" class="basic-button">{@manager.create_news_btn}</a>
-			<ul>
+			<table>
+				<tr>
+					<th>News</th>
+					<!--<th>Date création</th>-->
+					<th>Actions</th>
+				</tr>
 				# START news #
-					<li><a href="{@news.link}{news.ID}">{news.TITLE}</a></li>
+					<tr>
+						<td><a href="{@news.link}{news.ID}">{news.TITLE}</a></td>
+						<!--<td>{news.CREATED}</td>-->
+						<td><!--<span style="color:green">{<a href="{EDIT_LINK}">éditer</a>}</span>|--><span style="color:red">{<a href="{DELETE_LINK}">supprimer</a>}</span></td>
+					</tr>
 				# END news #
-			</ul>
+			</table>
 		# ELSE #
 			<div class="warning">{@manager.user_not_partner} <a href="{@add_link}">cette page</a></div>
 		# ENDIF #
+	# ENDIF #
+
+	# IF EDIT_NEWS #
+
+	# ENDIF #
+
+	# IF DELETE_NEWS #
+
 	# ENDIF #
 # ELSE #
 	<div class="error">{@manager.connection_required}</div>
